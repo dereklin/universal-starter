@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { HomeComponent } from './home/home.component';
       { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
     ])
   ],
-  providers: [],
+  providers: [
+    {provide: APP_BASE_HREF, useValue: '/sub/starter/'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

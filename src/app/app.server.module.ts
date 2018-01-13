@@ -4,6 +4,7 @@ import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
 
 import {AppModule} from './app.module';
 import {AppComponent} from './app.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -16,5 +17,8 @@ import {AppComponent} from './app.component';
   // Since the bootstrapped component is not inherited from your
   // imported AppModule, it needs to be repeated here.
   bootstrap: [AppComponent],
+  providers: [
+    {provide: APP_BASE_HREF, useValue: '/sub/starter/'}
+  ]
 })
 export class AppServerModule {}
