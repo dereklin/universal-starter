@@ -16,8 +16,6 @@ import { renderModuleFactory } from '@angular/platform-server';
 import { ROUTES } from './static.paths';
 import { environment } from './src/environments/environment';
 
-console.log('environment.baseHref', environment.baseHref);
-
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main.bundle');
 
