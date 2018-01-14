@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseHref: '/prod/app1/'
+  baseHref: '/dist/browser/'
 };
