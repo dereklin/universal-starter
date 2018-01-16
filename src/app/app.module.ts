@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { APP_BASE_HREF } from '@angular/common';
     ])
   ],
   providers: [
-    {provide: APP_BASE_HREF, useValue: '/sub/starter/'}
+    {provide: APP_BASE_HREF, useValue: environment.baseHref}
   ],
   bootstrap: [AppComponent]
 })
